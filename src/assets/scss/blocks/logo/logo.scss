@@ -1,0 +1,30 @@
+.logo {
+    z-index: 100;
+    margin: 5px;
+}
+
+.logo svg {
+    width: 130px;
+    height: 75px;
+}
+
+@media (min-width: $tabletWidth) {
+    .logo {
+        margin: 14px;
+    }
+    .logo svg {
+        width: 200px;
+        height: 85px;
+    }
+}
+// ##############################--DESKTOP--##########################
+@media (min-width: $desktopWidth) {
+    .logo {
+        margin-bottom: 40px;
+
+        & svg {
+            width: 350px;
+            height: 150px;
+        }
+    }
+}

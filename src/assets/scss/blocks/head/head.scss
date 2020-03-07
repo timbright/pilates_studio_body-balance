@@ -1,0 +1,30 @@
+// Begining style for Mobile
+.head {
+    text-align: center;
+    margin: 15px 0;
+
+    font-family: $secondary-font, serif;
+    font-weight: 300;
+    font-size: rem(26);
+    // text-transform: uppercase;
+}
+
+// End style for Mobile
+// #
+// Begining style for Tablet
+@media (min-width: $tabletWidth) {
+    .head {
+        margin: 18px 0;
+    }
+}
+
+// End style for Tablet
+// #
+// Begining style for Desktop
+@media (min-width: $desktopWidth) {
+    .head {
+        margin: 24px 0;
+    }
+}
+
+// End style for Deskop

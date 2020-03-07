@@ -1,0 +1,56 @@
+.group-classes__list {
+    // padding: 0 20px;
+}
+
+.group-classes__item {
+    margin-bottom: 12px;
+}
+
+.group-classes__block {
+    text-align: center;
+    // margin-bottom: 10px;
+
+    font-size: rem(20px);
+}
+
+.group-classes__title {
+    margin-bottom: 0px;
+}
+
+//#################################
+@media (min-width: $tabletWidth),
+(orientation: landscape) {
+    .group-classes__block {
+        // margin-bottom: 14px;
+    }
+
+    .group-classes__item {
+        margin-bottom: 18px;
+    }
+
+}
+
+// ##############################--DESKTOP--##########################
+@media (min-width: $desktopWidth) {
+    .group-classes__head {
+        margin-bottom: 8px;
+    }
+
+    .group-classes__block {
+        // margin-bottom: 20px;
+    }
+
+    .group-classes__duration {
+        font-size: rem(14);
+        margin-bottom: 20px;
+        text-align: center;
+    }
+
+    .group-classes__item {
+        margin-bottom: 40px;
+    }
+
+    .group-classes__title {
+        margin-bottom: 10px;
+    }
+}

@@ -1,0 +1,32 @@
+.main-quote {
+    display: flex;
+    flex-direction: column;
+
+    width: 90%;
+
+    margin: 0 auto;
+    margin-bottom: 24px;
+
+    max-width: $desktopWidth;
+
+    // background-color: rgb(241, 91, 91);
+}
+
+// .main-quote__text {
+//     font-size: rem($font-size-smBig);
+//     line-height: 29px;
+// }
+
+.main-quote__autor {
+    font-size: rem($font-size-default);
+    line-height: 39px;
+    margin-right: 10px;
+    text-align: right;
+}
+
+// ##############################--TABLET--##########################
+@media (min-width: $tabletWidth) {
+    .main-quote {
+        width: 65%;
+    }
+}

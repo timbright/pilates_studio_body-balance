@@ -1,0 +1,10 @@
+.main-inner {
+    position: relative;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+
+background-color: $default-color;
+// border-top: 1px solid #666;
+}

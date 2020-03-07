@@ -1,0 +1,62 @@
+// Begining style for Mobile
+.footer-inner {
+    position: relative;
+    display: flex;
+
+    margin: 0 auto;
+    justify-content: center;
+    max-width: $bigDesktopWidth;
+}
+
+.footer-inner .logo {
+    margin-top: 10px;
+    margin-bottom: 24px;
+    z-index: 0;
+
+    & svg {
+        width: 130px;
+    }
+}
+// End style for Mobile
+// #
+// Begining style for Tablet
+@media (min-width: $tabletWidth) {
+    .footer-inner .logo {
+        margin-top: 10px;
+        margin-bottom: 24px;
+
+        & svg {
+            width: 200px;
+        }
+    }
+}
+// End style for Tablet
+// #
+// Begining style for Desktop
+@media (min-width: $desktopWidth) {
+
+    .footer-inner {
+        display: flex;
+        flex-direction: row;
+        align-items: unset;
+        justify-content: space-between;
+    }
+
+    .footer-inner .logo {
+        margin: 0;
+        margin-left: 50px;
+
+        & svg {
+            width: 126px;
+        }
+    }
+
+    .footer-inner .contact {
+        width: 320px;
+    }
+
+    .footer-inner .map {
+        display: none;
+    }
+}
+// End style for Desktop

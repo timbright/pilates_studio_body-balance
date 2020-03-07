@@ -1,0 +1,78 @@
+.our-teachers__item {
+    display: flex;
+    flex-direction: column;
+    border-top: 1px solid #666;
+    margin-bottom: 38px;
+}
+
+.our-teachers__name {
+    font-family: $secondary-font;
+    font-size: $font-size-default;
+    font-weight: $font-weight-semibold;
+    margin-top: 10px;
+    margin-bottom: 10px;
+
+    text-transform: uppercase;
+}
+
+.our-teachers__degree {
+    margin-top: 10px;
+    margin-bottom: 10px;
+
+    font-family: $secondary-font;
+    font-size: $font-size-medium;
+    font-weight: $font-weight-default;
+    text-transform: uppercase;
+}
+
+.our-teachers__image {
+
+    width: 100%;
+}
+
+.our-teachers__text {
+    font-size: rem(16);
+}
+
+//#################################
+@media (min-width: $tabletWidth),
+(orientation: landscape) {
+    .our-teachers__item {
+        display: block;
+
+        margin-bottom: 58px;
+    }
+
+    .our-teachers__image {
+
+        width: 200px;
+        height: 200px;
+
+        float: right;
+
+        margin: 0 0 0.5em 0.5em;
+    }
+
+    .our-teachers__name {
+        font-size: $font-size-smBig;
+        margin-top: 10px;
+        margin-bottom: 10px;
+    }
+
+    .our-teachers__degree {
+        margin-top: 10px;
+        margin-bottom: 10px;
+        font-size: $font-size-default;
+    }
+}
+
+// End style for Tablet
+// #
+// Begining style for Desktop
+@media (min-width: $desktopWidth) {
+    .our-teachers__item {
+        margin-bottom: 78px;
+    }
+}
+
+// End style for Deskop

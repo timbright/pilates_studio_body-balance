@@ -1,0 +1,246 @@
+// general styles 
+.main-nav__link {
+  cursor: pointer;
+}
+
+.main-nav__item {
+  position: relative;
+}
+
+
+
+
+
+
+//правило дествует до размера desktop
+@media(max-width: $desktopWidth) {
+  .main-nav {
+    // position: fixed;
+    // top: 0;
+    // right: -100%;
+    // top: -100%;
+
+    position: absolute;
+    top: 0;
+    left: 0;
+
+    width: 100%;
+    // height: 200px;
+    // height: 100%;
+    // z-index: 100;
+
+    background-color: $default-color;
+
+    background-color: rgb(246, 19, 19);
+  }
+
+  .main-nav__list {
+    position: absolute;
+    top: -360px;
+    left: 0;
+    // z-index: -10;
+    // left: 0;
+
+    width: 100%;
+    // height: 100%;
+    min-height: 260px;
+
+    display: flex;
+    flex-direction: column;
+
+    justify-content: center;
+    align-items: center;
+
+
+    background-color: $default-color;
+
+    // background-color: rgb(53, 50, 233);
+    transition: top 0.5s linear;
+
+  }
+
+  .main-nav__list--active {
+    top: 99px;
+    transition: top 0.5s linear;
+  }
+
+  .main-nav__link--classes:hover {
+    height: 200px;
+    width: 100px;
+    background-color: rgb(228, 10, 10);
+  }
+
+  // .main-nav__link--classes:hover>.sub-main-nav__list {
+  //   height: 200px;
+  //   width: 100px;
+  //   opacity: 1;
+  //   background-color: rgb(228, 10, 10);
+
+  //   transition: all .5 ease-in;
+  // }
+
+
+
+
+  // toogle Hamburger menu -closed- condition
+
+  .toggle {
+    display: block;
+    width: 40px;
+    height: 40px;
+
+    font-size: 0;
+    background: transparent;
+
+    box-shadow: none;
+    overflow: hidden;
+    cursor: pointer;
+  }
+
+  .toggle span {
+    position: absolute;
+    top: 23px;
+    left: 10px;
+    right: 10px;
+
+    display: block;
+    height: 3px;
+
+    background: $primary-color;
+
+    border: none;
+
+    transition: background 0s 0.2s;
+
+    &::before,
+    &::after {
+      content: "";
+      position: absolute;
+      left: 0;
+
+      display: block;
+      width: 100%;
+      height: 3px;
+
+      background: $primary-color;
+      // плавно возвращает бургер в исходное состояние
+      transition: transform 0.2s ease-in, top 0.2s linear 0.2s;
+    }
+
+    &::before {
+      top: -8px;
+    }
+
+    &::after {
+      top: 8px;
+    }
+  }
+
+  .toggle--active span {
+    // делает прозрачным линию посередине
+    background: transparent;
+  }
+
+  // анимация происходит после нажатия меню-гамбургер.
+  // обратная анимация происходит в псевдоэлементах выше
+  // в обратном порядке
+  .toggle--active span::before {
+    transform: rotate(-45deg);
+    top: 0;
+    // анимируется top за время линейно, затем срабатывает transform
+    // за время ease-in с задержкой в n-секунд
+    transition: top 0.2s linear, transform 0.2s ease-in 0.3s;
+  }
+
+  .toggle--active span::after {
+    transform: rotate(45deg);
+    top: 0;
+    transition: top 0.2s linear, transform 0.2s ease-in 0.3s;
+  }
+
+  .main-nav__toggle {
+    position: fixed;
+    z-index: 100;
+    top: 29px;
+    right: 35px;
+    // top: 30px;
+    // left: -57px;
+  }
+
+
+  .main-nav__link {
+    position: relative;
+    color: $text-color-primary;
+    text-decoration: none;
+    // text-transform: uppercase;
+
+
+    font-family: $secondary-font;
+    font-size: rem($font-size-big);
+    font-weight: $font-weight-semibold;
+    line-height: 36px;
+    letter-spacing: .2em;
+    // text-transform: uppercase;
+
+    cursor: pointer;
+  }
+
+  .main-nav__link--active {
+    color: $text-color-secondary;
+    // position: relative;
+  }
+
+  .main-nav__link--contacts {
+    display: none;
+  }
+}
+
+// ##############################--DESKTOP--##########################
+@media (min-width: $desktopWidth) {
+  .main-nav__list {
+    position: relative;
+    position: static;
+    display: flex;
+    margin-bottom: 16px;
+  }
+
+  .main-nav__link {
+    position: relative;
+    color: $text-color-primary;
+    text-decoration: none;
+    text-transform: uppercase;
+    // font-size: 16px;
+    padding: 0 14px;
+
+    &:hover {
+      color: $text-color-hover;
+      transition: color .4s ease-in-out;
+    }
+  }
+
+  .main-nav__link--active {
+    color: $text-color-secondary;
+    position: relative;
+
+    &::before {
+      content: "";
+      position: absolute;
+      right: 0;
+      left: 0;
+      bottom: 30px;
+      height: 4px;
+      background: $text-color-secondary;
+    }
+  }
+
+  // toogle Hamburger menu hidden
+  .main-nav__toggle {
+    display: none;
+  }
+
+  .main-nav__link-classes:hover>.sub-main-nav__list {
+    visibility: visible;
+    opacity: 1;
+    transition: opacity .2s ease-in-out, margin-top .2s ease-in-out;
+  }
+}

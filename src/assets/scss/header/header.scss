@@ -1,0 +1,14 @@
+
+.header {
+    position: relative;
+    min-height: 100px;
+}
+
+@media (min-width: 1280px) {
+    .header {
+        // background-color: rgb(243, 119, 129);
+        min-height: 250px;
+    }
+}
+
+

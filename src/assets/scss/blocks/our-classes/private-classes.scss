@@ -1,0 +1,123 @@
+// .private-classes {}
+
+// .private-classes__head {
+//     font-family: $secondary-font;
+//     font-size: $font-size-bigger;
+//     font-weight: $font-weight-light;
+//     margin-top: 10px;
+//     margin-bottom: 42px;
+
+//     text-transform: uppercase;
+
+//     text-align: center;
+// }
+
+.private-classes__list {
+    // padding: 0 20px;
+}
+
+.private-classes__item {
+    margin-bottom: 12px;
+}
+
+.private-classes__block {
+    text-align: center;
+    margin-bottom: 10px;
+
+    font-size: rem(20px);
+}
+
+.private-classes__title {
+    margin-bottom: 0px;
+}
+
+// .private-classes__title {
+//     color: $text-color-default-dark;
+//     font-family: $secondary-font;
+//     font-size: $font-size-medium;
+//     font-weight: $font-weight-medium;
+//     letter-spacing: 2px;
+//     margin-top: 10px;
+//     margin-bottom: 10px;
+
+//     text-transform: uppercase;
+// }
+
+// .private-classes__text {
+//     color: $text-color-default-light;
+//     font-size: $font-size-medium;
+
+//     font-weight: 400;
+//     letter-spacing: 1px;
+// }
+
+//#################################
+@media (min-width: $tabletWidth),
+(orientation: landscape) {
+    .private-classes__block {
+        margin-bottom: 14px;
+    }
+
+
+    // .private-classes {}
+
+    // .private-classes__head {}
+
+    // .private-classes__list {}
+
+    .private-classes__item {
+        margin-bottom: 18px;
+    }
+
+
+    .private-classes__img-reformer,
+    .private-classes__img-ladder {
+        width: 200px;
+        height: 200px;
+
+        float: left;
+
+        margin: 0 0.5em 0 0;
+    }
+
+    .private-classes__img-cadillac,
+    .private-classes__img-chair {
+        width: 200px;
+        height: 200px;
+
+        float: right;
+
+        margin: 0 0 0.5em 0.5em;
+    }
+
+    // .private-classes__text {}
+}
+
+// ##############################--DESKTOP--##########################
+@media (min-width: $desktopWidth) {
+    // .private-classes {}
+
+    .private-classes__head {
+        margin-bottom: 8px;
+    }
+
+    .private-classes__block {
+        margin-bottom: 20px;
+    }
+
+    // .private-classes__list {}
+
+    .private-classes__item {
+        margin-bottom: 40px;
+    }
+
+    .private-classes__title {
+        margin-bottom: 10px;
+    }
+
+    .private-classes__description {
+        margin-bottom: 40px;
+    }
+
+    // .private-classes__text {}
+}
