@@ -1,4 +1,4 @@
-// general styles 
+//-general styles
 .main-nav__link {
   cursor: pointer;
 }
@@ -7,28 +7,15 @@
   position: relative;
 }
 
-
-
-
-
-
-//правило дествует до размера desktop
-@media(max-width: $desktopWidth) {
+//-правило действует до размера desktop
+@media (max-width: $desktopWidth) {
   .main-nav {
-    // position: fixed;
-    // top: 0;
-    // right: -100%;
-    // top: -100%;
-
     position: absolute;
     top: 0;
     left: 0;
 
     width: 100%;
-    // height: 200px;
-    // height: 100%;
-    // z-index: 100;
-
+  
     background-color: $default-color;
 
     background-color: rgb(246, 19, 19);
@@ -38,11 +25,9 @@
     position: absolute;
     top: -360px;
     left: 0;
-    // z-index: -10;
-    // left: 0;
 
     width: 100%;
-    // height: 100%;
+
     min-height: 260px;
 
     display: flex;
@@ -50,13 +35,13 @@
 
     justify-content: center;
     align-items: center;
+    text-align: center;
 
+    padding: 18px;
 
     background-color: $default-color;
 
-    // background-color: rgb(53, 50, 233);
     transition: top 0.5s linear;
-
   }
 
   .main-nav__list--active {
@@ -64,25 +49,6 @@
     transition: top 0.5s linear;
   }
 
-  .main-nav__link--classes:hover {
-    height: 200px;
-    width: 100px;
-    background-color: rgb(228, 10, 10);
-  }
-
-  // .main-nav__link--classes:hover>.sub-main-nav__list {
-  //   height: 200px;
-  //   width: 100px;
-  //   opacity: 1;
-  //   background-color: rgb(228, 10, 10);
-
-  //   transition: all .5 ease-in;
-  // }
-
-
-
-
-  // toogle Hamburger menu -closed- condition
 
   .toggle {
     display: block;
@@ -167,19 +133,17 @@
     // left: -57px;
   }
 
-
   .main-nav__link {
     position: relative;
     color: $text-color-primary;
     text-decoration: none;
     // text-transform: uppercase;
 
-
     font-family: $secondary-font;
     font-size: rem($font-size-big);
     font-weight: $font-weight-semibold;
     line-height: 36px;
-    letter-spacing: .2em;
+    letter-spacing: 0.2em;
     // text-transform: uppercase;
 
     cursor: pointer;
@@ -192,6 +156,13 @@
 
   .main-nav__link--contacts {
     display: none;
+  }
+
+  //^hover on menu link actions on submenu
+  .main-nav__link-classes:hover > .sub-main-nav__list {
+    max-height: 200px; 
+    opacity: 1;
+    transition: max-height 0.5s, opacity .3s ease-in-out;
   }
 }
 
@@ -214,7 +185,7 @@
 
     &:hover {
       color: $text-color-hover;
-      transition: color .4s ease-in-out;
+      transition: color 0.4s ease-in-out;
     }
   }
 
@@ -237,10 +208,11 @@
   .main-nav__toggle {
     display: none;
   }
-
-  .main-nav__link-classes:hover>.sub-main-nav__list {
+ //^animation sub-menu
+  .main-nav__link-classes:hover > .sub-main-nav__list {
     visibility: visible;
     opacity: 1;
-    transition: opacity .2s ease-in-out, margin-top .2s ease-in-out;
+    transition: opacity 0.2s ease-in-out, margin-top 0.2s ease-in-out;
   }
 }
+

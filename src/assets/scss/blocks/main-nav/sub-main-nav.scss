@@ -1,4 +1,16 @@
-.sub-main-nav__list {
+@media (max-width: $desktopWidth) {
+  .sub-main-nav__list {
+    overflow: auto;
+    opacity: 0;
+    transition: max-height 0.3s;
+    max-height: 0;
+    background-color: rgba(0, 0, 0, 0.09);
+    padding: 0 20px;
+  }
+}
+
+@media (min-width: $desktopWidth) {
+  .sub-main-nav__list {
     visibility: hidden;
     opacity: 0;
 
@@ -9,7 +21,7 @@
     padding: 20px 10px;
 
     font-size: rem(14px);
-    // background-color: rgb(243, 10, 10);
+
     background: $default-color;
     min-width: 200px;
 
@@ -22,41 +34,50 @@
     border-radius: 3px;
 
     & .main-nav__link {
-        display: block;
-        word-wrap: normal; // margin: 20px;
-        // margin-left: 100px;
-        // text-transform: none;
-        padding: 0;
-        margin: 3px;
+      display: block;
+      word-wrap: normal; // margin: 20px;
+      // margin-left: 100px;
+      // text-transform: none;
+      padding: 0;
+      margin: 3px;
 
-        // flex-wrap: nowrap;
+      // flex-wrap: nowrap;
     }
 
     &::before {
-        border-color: transparent transparent rgb(255, 255, 255);
-        border-style: solid;
-        border-width: 16px 18px;
-        bottom: 100%;
-        content: "";
-        margin-bottom: -4px;
-        position: absolute;
-        z-index: 99;
+      border-color: transparent transparent rgb(255, 255, 255);
+      border-style: solid;
+      border-width: 16px 18px;
+      bottom: 100%;
+      content: "";
+      margin-bottom: -4px;
+      position: absolute;
+      z-index: 99;
 
-        // box-shadow: 0px 0px 10px 0px rgba(0, 0, 0, 0.09);
+      // box-shadow: 0px 0px 10px 0px rgba(0, 0, 0, 0.09);
     }
 
     & .main-nav__link--active {
-        color: $text-color-secondary;
-        position: relative;
+      color: $text-color-secondary;
+      position: relative;
 
-        &::before {
-            content: "";
-            position: absolute;
-            right: 0;
-            left: 0;
-            bottom: 23px;
-            height: 2px;
-            background: transparent;
-        }
+      &::before {
+        content: "";
+        position: absolute;
+        right: 0;
+        left: 0;
+        bottom: 23px;
+        height: 2px;
+        background: transparent;
+      }
     }
+  }
 }
+
+//@media (max-width: $desktopWidth) {
+//  .sub-main-nav__list {
+//     position: relative;
+//     background: none;
+
+//  }
+//}

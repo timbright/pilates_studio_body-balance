@@ -1,0 +1,58 @@
+{
+   "better-comments.tags": [
+      {
+        "tag": "!",
+        "color": "#FF2D00",
+        "strikethrough": false,
+        "backgroundColor": "transparent"
+      },
+      {
+        "tag": "?",
+        "color": "#3498DB",
+        "strikethrough": false,
+        "backgroundColor": "transparent"
+      },
+      {
+        "tag": "//",
+        "color": "#474747",
+        "strikethrough": true,
+        "backgroundColor": "transparent"
+      },
+      {
+        "tag": "todo",
+        "color": "#FF8C00",
+        "strikethrough": false,
+        "backgroundColor": "transparent"
+      },
+      {
+        "tag": "*",
+        "color": "#98C379",
+        "strikethrough": false,
+        "backgroundColor": "transparent"
+      },
+      {
+         "tag": "#",
+         "color": "#00FF7F",
+         "strikethrough": false,
+         "backgroundColor": "transparent"
+       },
+       {
+         "tag": "^",
+         "color": "#08E8DE",
+         "strikethrough": false,
+         "backgroundColor": "transparent"
+       },
+       {
+         "tag": "@",
+         "color": "#E0B0FF",
+         "strikethrough": true,
+         "backgroundColor": "transparent"
+       },
+       {
+         "tag": "-",
+         "color": "#FFFF99",
+         "strikethrough": false,
+         "backgroundColor": "transparent"
+       }
+    ]
+}
